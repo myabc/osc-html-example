@@ -1,0 +1,95 @@
+html, body {
+  margin:  0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Slabo 27px', serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+}
+
+header {
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient */
+  background: linear-gradient(45deg, #006666, darkgreen);
+}
+
+footer {
+  background-color: #eee;
+  font-size: 0.9rem;
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  padding: 1.5rem;
+  font-size: 3rem;
+  color: white;
+}
+
+nav {
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+#top-nav {
+  font-size: 1.2em;
+  padding: 0 1rem;
+  border-bottom: 1px solid darkgreen;
+}
+
+#top-nav ul li:first-of-type {
+  margin-left: -1rem;
+}
+
+#top-nav a {
+  padding: 0.5rem 1.5rem;
+}
+
+#top-nav a:hover {
+  background-color: #eee;
+}
+
+#bottom-nav ul li {
+  padding: 0 0.25rem;
+}
+
+#bottom-nav ul li:first-of-type {
+  padding-left: 0;
+}
+
+#bottom-nav a {
+}
+
+#bottom-nav a:hover {
+  text-decoration: underline;
+}
+
+#page {
+  display: flex;
+  min-height: 800px;
+}
+
+#articles {
+  flex: 2;
+  margin: 0 1.5rem
+}
+
+#side-area {
+  flex: 1;
+  margin: 0 1.5rem
+}
