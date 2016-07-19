@@ -97,19 +97,24 @@ nav li a {
 }
 
 #page {
-  display: flex;
-  min-height: 800px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: stretch;
 }
 
 #articles {
-  flex: 2;
-  margin: 0 1.5rem;
+  flex: 3;
+  padding: 0 1.5rem;
+  flex-basis: 300px;
 }
 
 #side-area {
-  flex: 1; /* TODO: add flex-basis */
-  margin: 0 1.5rem;
-  min-width: 300px;
+  flex: 1;
+  padding: 0 1.5rem;
+  flex-basis: 200px;
 }
 
 #coming-up {
