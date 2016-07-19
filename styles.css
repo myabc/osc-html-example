@@ -41,8 +41,24 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
+  align-items: stretch;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  flex-grow: 1;
+  flex-basis: 200px;
+}
+
+@media (max-width: 500px) {
+  nav ul {
+    flex-wrap: wrap;
+  }
+  nav ul li {
+    flex-basis: 100%;
+  }
 }
 
 nav li a {
@@ -55,10 +71,6 @@ nav li a {
   font-size: 1.2em;
   padding: 0 1rem;
   border-bottom: 1px solid darkgreen;
-}
-
-#top-nav ul li:first-of-type {
-  margin-left: -1rem;
 }
 
 #top-nav a {
