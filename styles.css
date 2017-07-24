@@ -15,6 +15,12 @@ html {
 
 body {
   background-color: white;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: stretch;
 }
 
 h1 {
@@ -28,12 +34,16 @@ p {
 header {
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient */
   background: linear-gradient(45deg, #006666, darkgreen);
+  flex-grow: 1;
+  flex-basis: 100%;
 }
 
 footer {
   background-color: #eee;
   font-size: 1.5rem;
   padding: 1.5rem 1rem 1rem 1rem;
+  flex-grow: 1;
+  flex-basis: 100%;
 }
 
 header h1 {
@@ -44,6 +54,8 @@ header h1 {
 }
 
 nav {
+  flex-grow: 1;
+  flex-basis: 100%;
 }
 
 nav ul {
@@ -60,89 +72,43 @@ nav ul li {
   flex-basis: 200px;
 }
 
-@media (max-width: 500px) {
-  nav ul {
-    flex-wrap: wrap;
-  }
-  nav ul li {
-    flex-basis: 100%;
-  }
-}
-
 nav li a {
   display: block;
   text-decoration: none;
   color: inherit;
   font-size: 2rem;
+  background: #333;
+  color: white;
 }
 
-#top-nav {
-  font-size: 1.2em;
-  padding: 0 1rem;
-  border-bottom: 1px solid darkgreen;
+nav li a:hover {
+  background: #AAA;
+  color: black;
 }
 
-#top-nav a {
-  padding: 0.5rem 1.5rem;
+.main-content {
+  flex-grow: 1;
+  flex-basis: 66%;
 }
 
-#top-nav a:hover {
-  background-color: #eee;
-}
-
-#bottom-nav ul li {
-  padding: 0 0.25rem;
-}
-
-#bottom-nav ul li:first-of-type {
-  padding-left: 0;
-}
-
-#bottom-nav a {
-}
-
-#bottom-nav a:hover {
-  text-decoration: underline;
-}
-
-#page {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  align-items: stretch;
-}
-
-#articles {
-  flex: 3;
-  padding: 0 1.5rem;
-  flex-basis: 300px;
-}
-
-#side-area {
-  flex: 1;
-  padding: 0 1.5rem;
+aside {
+  flex-grow: 1;
   flex-basis: 200px;
+  padding: 10px;
 }
 
-#coming-up {
-  display: flex;
-  flex-flow: wrap;
-  align-items: stretch;
-  justify-content: flex-end;
+.slider {
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 10px;
 }
-
-#coming-up article {
-  flex: 1 1 50%;
-  max-width: 50%;
-  padding: 0.5rem 1rem;
+.slick-slide {
+  margin: 0px 20px;
 }
-
-#coming-up article > img {
-  padding: 0;
+.slick-slide img {
+  width: 100%;
 }
-
-#coming-up article:nth-child(3n+2) {
-  background-color: #eee;
+.slick-prev:before,
+.slick-next:before {
+  color: black;
 }
